@@ -3,6 +3,10 @@ Simple subroutine to plot characters onto the screen.
 
 Based on PET screen ram at 32768 and either 40 or 80 column screen.
 
+USAGE:
+Simply set variables x and y to screen coordinates, set c to a character code (poke not chr$).
+Then gosub 2000 (or whatever line you used) to plot c at x,y
+
 40 character version for PET 2001 etc.
 
 ```
