@@ -128,7 +128,7 @@ $a_Mx=-1\frac{m\Delta x}{d^3}$
 $a_My=-1\frac{m\Delta y}{d^3}$
 
 
-What I mean about "m's perspective" is that in our computer screen dimensions, if we are calculating delta X, and we M's X minus m's X then if M is left of m, we will get a negative number which will accelerate us toward the left, likewise if M is right of m, we will get a positive number accelerating us right.  For moving M toward m, we would have opposite signs but calculate the same magnitude for delta x and delta y so in the bottom two equations I multiplyed M's acceleratinos by negative 1.
+What I mean about "m's perspective" is that in our computer screen dimensions, if we are calculating delta X, and we take M's X minus m's X then if M is left of m, we will get a negative number which will accelerate m toward the left, likewise if M is right of m, we will get a positive number accelerating m right.  For moving M toward m, we would have opposite signs but calculate the same magnitude for delta x and delta y so in the bottom two equations I multiplyed M's acceleratinos by negative 1.
 
 This is all in the code at lines 40-70.
 ```
