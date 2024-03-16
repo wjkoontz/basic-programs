@@ -12,6 +12,8 @@ Mass is simply used as a coefficent to calculate the acceleration see below deta
 
 ## How to run
 
+Copy all the code in [dualorbit.bas](dualorbit.bas) and paste it into a PET emulator.  If using a C64 or 80 column PET see [petplot](petplot.md) to change the plot routine at line 2000.
+
 ### Desktop emulator
 Easy to run in VICE or similar emulator of Commodore systems.
 
