@@ -86,3 +86,69 @@ The last variable om, and tm, are the masses, 0 makes them not attract the other
 
 ## Gory math details
 
+### Equations
+
+Newtons second law states that the force needed to accelerate an object is proportional to its mass.
+
+$f=ma$
+
+From that we simply rearrange to get acceleration equals force divided by mass.
+
+$a=\frac{f}{m}$
+
+Newtons equation for the force of gravity.
+
+$f_g=G\frac{Mm}{d^2}$
+
+Rearanging for acceleration of the smaller mass gives.
+
+$a_m=\frac{GMm}{md^2}$
+
+Simplifying the m's cancel, and we are using G=1 in our universe, each bodies acceleration can be easily calculated given their distance.
+
+$a_m=\frac{M}{d^2}$
+
+$a_M=\frac{m}{d^2}$
+
+This gives us the acceleration in the direction toward the other body.  We need to convert that into two accerelations in each X and Y dimension.
+This is done by multiplying the total acceleration by the sine or cosine of the angle between them.
+
+The amount of total acceration in the straight line direction toward the other body that is solely in the X direction can be calulated by multiplying the total acceleration by the difference in the X direction divided by the actual distance.
+
+$a_mx=a\frac{\Delta x}{d}$
+
+Assuming we calculated the deltas only once from m's perspective, and substituting the total acceleration equations above for "a" we get these four equations for X and Y for each object.
+
+$a_mx=\frac{M\Delta x}{d^3}$
+
+$a_my=\frac{M\Delta y}{d^3}$
+
+$a_Mx=-1\frac{m\Delta x}{d^3}$
+
+$a_My=-1\frac{m\Delta y}{d^3}$
+
+
+What I mean about "m's perspective" is that in our computer screen dimensions, if we are calculating delta X, and we M's X minus m's X then if M is left of m, we will get a negative number which will accelerate us toward the left, likewise if M is right of m, we will get a positive number accelerating us right.  For moving M toward m, we would have opposite signs but calculate the same magnitude for delta x and delta y so in the bottom two equations I multiplyed M's acceleratinos by negative 1.
+
+This is all in the code at lines 40-70.
+```
+40 dx=t(0,0)-o(0,0):dy=t(0,1)-o(0,1)
+50 d2=dx^2+dy^2:d3=d2*sqr(d2)
+60 o(2,0)=tm*dx/d3:o(2,1)=tm*dy/d3
+70 t(2,0)=-1*om*dx/d3:t(2,1)=-1*om*dy/d3
+```
+
+* Line 40 calculates the delta X and delta Y from "objects" perspective, so the calculated X and Y accelerations will have a sign that moves "object" toward "thing".
+* Line 50 uses that to calculate the distance squared, and multiplyes the distance squared by the distance to get the distance cubed needed for the acceleration equations.
+* Line 60 calculates "object"'s X and Y acceleration and stores them in o(2,0) and o(2,1) respectively.
+* Line 70 does same for "thing"'s X and Y multiplying by negative one to correct for the sign of delta X and delta Y being for "object".
+
+The lines 80-110 add "object"'s X acceleration to its X velocity, its X velocity to its X position, Y acceleration to Y velocity, Y velocity to Y position for one iteratiton.  Lines 120-150 do the same for "thing".
+
+Lines 160-190 plot the two objects using the petplot routine.  First plotting a "space" (poke code 32) then each objects character, 42 asterix for "object" and 81 dot for "thing".  Plotting a space first makes it flash a bit if an object returns to a spot already drawn on and allows you to see where it currently is if its in a stable orbit or otherwise crossing an existing path.
+
+
+
+
+
+
