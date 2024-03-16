@@ -145,7 +145,7 @@ This is all in the code at lines 40-70.
 
 The lines 80-110 add "object"'s X acceleration to its X velocity, its X velocity to its X position, Y acceleration to Y velocity, Y velocity to Y position for one iteratiton.  Lines 120-150 do the same for "thing".
 
-Lines 160-190 plot the two objects using the petplot routine.  First plotting a "space" (poke code 32) then each objects character, 42 asterix for "object" and 81 dot for "thing".  Plotting a space first makes it flash a bit if an object returns to a spot already drawn on and allows you to see where it currently is if its in a stable orbit or otherwise crossing an existing path.
+Lines 160-190 plot the two objects using the [petplot](petplot.md) routine.  First plotting a "space" (poke code 32) then each objects character, 42 asterix for "object" and 81 dot for "thing".  Plotting a space first makes it flash a bit if an object returns to a spot already drawn on and allows you to see where it currently is if its in a stable orbit or otherwise crossing an existing path.
 
 
 
