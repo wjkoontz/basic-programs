@@ -102,7 +102,7 @@ Newtons equation for the force of gravity.
 
 $f_g=G\frac{Mm}{d^2}$
 
-Rearanging for acceleration of the smaller mass gives.
+Substituting this equation for force in the acceleration equation for the smaller mass gives.
 
 $a_m=\frac{GMm}{md^2}$
 
