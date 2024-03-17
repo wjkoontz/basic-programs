@@ -117,17 +117,17 @@ This is done by multiplying the total acceleration by the sine or cosine of the 
 
 The amount of total acceration in the straight line direction toward the other body that is solely in the X direction can be calulated by multiplying the total acceleration by the difference in the X direction divided by the actual distance.
 
-$a_mx=a\frac{\Delta x}{d}$
+$a_x=a\frac{\Delta x}{d}$
 
 Assuming we calculated the deltas only once from m's perspective, and substituting the total acceleration equations above for "a" we get these four equations for X and Y for each object.
 
-$a_mx=\frac{M\Delta x}{d^3}$
+$a_{mx}=\frac{M\Delta x}{d^3}$
 
-$a_my=\frac{M\Delta y}{d^3}$
+$a_{my}=\frac{M\Delta y}{d^3}$
 
-$a_Mx=-1\frac{m\Delta x}{d^3}$
+$a_{Mx}=-1\frac{m\Delta x}{d^3}$
 
-$a_My=-1\frac{m\Delta y}{d^3}$
+$a_{My}=-1\frac{m\Delta y}{d^3}$
 
 
 What I mean about "m's perspective" is that in our computer screen dimensions, if we are calculating delta X, and we take M's X minus m's X then if M is left of m, we will get a negative number which will accelerate m toward the left, likewise if M is right of m, we will get a positive number accelerating m right.  For moving M toward m, we would have opposite signs but calculate the same magnitude for delta x and delta y so in the bottom two equations I multiplyed M's acceleratinos by negative 1.
