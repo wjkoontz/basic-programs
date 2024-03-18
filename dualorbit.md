@@ -33,7 +33,7 @@ Select and copy the BASIC code, then in the emulator right-click inside the scre
 ### Important variable names and meaning
 There are two bodies, "object" "o" rendered as an asterix, and "thing" "t" rendered as a dot.
 
-Line 10 creates the arrays with the dim command which creates an array with three values in the first dimension (0-2), and two values in the second dimension (0-1).
+Line 10 uses the dim command to create two 2d arrays with three values in the first dimension (0-2), and two values in the second dimension (0-1).
 
 The two arrays store three x,y values for each objects position, velocity, and acceleration.
 ```
