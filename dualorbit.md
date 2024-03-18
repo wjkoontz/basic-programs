@@ -31,18 +31,20 @@ https://www.masswerk.at/pet/
 Select and copy the BASIC code, then in the emulator right-click inside the screen and select "Paste to PET" it will pop up a little 'paste' button you have to click to actually paste the text to pet.
 
 ### Important variable names and meaning
-Lines 20 and 30 are used to setup the initial values.
-
 There are two bodies, "object" "o" rendered as an asterix, and "thing" "t" rendered as a dot.
-o(2,3) is an array of 3 x,y numbers for "o".  Similarly with t(2,3)
+
+Line 10 creates the arrays with the dim command which creates an array with three values in the first dimension (0-2), and two values in the second dimension (0-1).
+
+The two arrays store three x,y values for each objects position, velocity, and acceleration.
 ```
   0 | 1
 ---------
 0 x | y  -  Position on Screen
 1 x | y  -  Velocity in each dimension
-2 x | y  -  Acceleration in each dimension leave 0 and let loop change this.
+2 x | y  -  Acceleration in each dimension 
 ```
-So in line 20 set o(0,0) to object's inital x location, and o(0,1) to object's initial y location.
+Lines 20 and 30 are used to setup the initial values.
+In line 20 set o(0,0) to object's inital x location, and o(0,1) to object's initial y location.
 Set o(1,0) to object's initial velocity in X  direction, positive goes right, negative goes left.
 Set o(1,1) to object's initial velocity in Y direction, positive goes down, negative goes up.
 Do the same for thing's initial values in line 30.
