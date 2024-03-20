@@ -36,3 +36,12 @@ c64 version
 2040 return
 ```
 
+VIC-20 Version 
+```
+2000 rem plot c at x,y
+2010 ifx<0orx>21ory<0ory>22 then 2040
+2020 ml=7680+int(y+.5)*22+int(x+.5)
+2030 poke ml,c
+2035 poke ml+30720,6
+2040 return
+```
